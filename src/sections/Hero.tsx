@@ -97,7 +97,7 @@ export default function Hero() {
           </div>
         </div>
         <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-center mt-6">
-          Impactful design, created effortlessly
+          Ship your MVP in 7 days
         </h1>
         <p className="text-center text-xl text-white/50 mt-8 max-w-2xl mx-auto">
           Design tools shouldn&apos;t slow down. Lorem ipsum dolor sit amet
@@ -105,6 +105,7 @@ export default function Hero() {
           laboriosam nihil illo. Vero sit accusantium itaque quaerat laborum
           iste, tempora exercitationem, ratione quo, dolorem mollitia beatae!
           Nihil ab harum debitis?
+          
         </p>
         <form className="flex border border-white/15 rounded-full p-2 mt-8 max-w-lg mx-auto">
           <input

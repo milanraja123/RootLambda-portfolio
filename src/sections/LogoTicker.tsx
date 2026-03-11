@@ -42,7 +42,7 @@ export default function LogoTicker() {
                   >
                     <span className="text-2xl">{item.icon}</span>
                     <span>{item.text}</span>
-                    <span className="text-lime-400 ml-12">///</span>
+                    <span className="text-lime-400 ml-12">{"///"}</span>
                   </span>
                 ))}
               </Fragment>

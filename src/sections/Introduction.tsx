@@ -4,7 +4,7 @@ import { useMotionValueEvent, useScroll, useTransform } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 import { twMerge } from "tailwind-merge";
 
-const text = `You're racing to create exceptional work, but traditional design tools slow you down with unnecessary complexity and steep learning curves.`;
+const text = `From idea to live product — faster than your competitors finish their wireframes. We build your product, write your content, and create your brand videos — all powered by AI. Built for startups ready to move fast.`;
 
 export default function Introduction() {
   const scrollTarget = useRef<HTMLDivElement>(null);

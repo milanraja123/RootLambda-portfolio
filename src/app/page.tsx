@@ -9,6 +9,7 @@ import Services from "@/sections/Services";
 import AiInAction from "@/sections/AiInAction";
 import HowItWorks from "@/sections/HowItWorks";
 import FinalCta from "@/sections/FinalCta";
+import LiveAiDemo from "@/sections/LiveAiDemo";
 
 import Navbar from "@/sections/Navbar";
 
@@ -18,6 +19,7 @@ export default function Home() {
       <div className="w-full flex flex-col items-center justify-center overflow-clip">
         <Navbar />
         <Hero />
+        <LiveAiDemo />
         <LogoTicker />
         <Introduction />
         <Services />
