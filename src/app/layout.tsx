@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -10,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Modern Design Tool Landing Page",
-    description: "Created with the help of Frontend Tribe",
+    title: "RootLambda - AI-Native Digital Studio",
+    description: "Build smarter. Grow faster. Think AI. We build AI-powered products, content systems, and automation tools for startups and businesses.",
 };
 
 export default function RootLayout({
@@ -24,6 +25,7 @@ export default function RootLayout({
             <body
                 className={`${inter.variable} font-sans antialiased bg-neutral-950 text-white`}
             >
+                <CustomCursor />
                 {children}
             </body>
         </html>

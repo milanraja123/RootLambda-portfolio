@@ -16,42 +16,70 @@ const services = [
     icon: "📱",
     name: "MOBILE APPS",
     desc: "iOS + Android from a single codebase. React Native apps with beautiful UX, backend API integration, and App Store ready in weeks, not months.",
-    tags: ["React Native", "Expo", "Firebase", "Push Notifications"],
+    tags: ["React Native", "Expo", "Firebase", "Cross-Platform"],
   },
   {
-    num: "03 — AI",
-    icon: "🤖",
-    name: "AI INTEGRATION",
-    desc: "AI chatbots, smart search, recommendation engines, content generators, and automation — baked directly into your product from day one.",
-    tags: ["OpenAI API", "Claude API", "LangChain", "n8n Automation"],
+    num: "03 — AUTOMATION",
+    icon: "⚙️",
+    name: "CUSTOM AI INTEGRATION",
+    desc: "End-to-end AI integration and workflow automation. We connect AI models to your existing systems, automate repetitive tasks, and build intelligent pipelines.",
+    tags: ["OpenAI", "Claude API", "n8n", "Custom Workflows"],
   },
   {
-    num: "04 — GROWTH",
-    icon: "📈",
-    name: "RETAINER & GROWTH",
-    desc: "Post-launch we don't disappear. Monthly retainers for feature development, performance, bug fixes, and scaling as your users grow. Your tech co-founder, on demand.",
-    tags: ["Monthly Plans", "Feature Dev", "Analytics", "Performance"],
-  },
-  {
-    num: "05 — CONTENT",
-    icon: "✍️",
-    name: "AI CONTENT WRITING",
-    desc: "Your brand voice, on autopilot. We build an AI content engine trained on your brand — blogs, LinkedIn posts, email campaigns, product descriptions, social captions.",
-    tags: ["Brand Voice AI", "SEO Blogs", "Social Copy", "Email Campaigns"],
-  },
-  {
-    num: "06 — VIDEO",
+    num: "04 — VIDEO",
     icon: "🎬",
-    name: "AI VIDEO MARKETING",
-    desc: "Turn your ideas into scroll-stopping brand videos — without a production team. AI writes the script, generates visuals, adds voiceover, and edits.",
-    tags: ["AI Script Writing", "Runway / HeyGen", "Brand Reels", "YouTube Shorts"],
+    name: "AI VIDEO CREATION",
+    desc: "Turn ideas into scroll-stopping videos without a production team. AI writes scripts, generates visuals, adds voiceover, and edits — all automated.",
+    tags: ["Runway", "HeyGen", "Brand Reels", "YouTube Shorts"],
+  },
+  {
+    num: "05 — MARKETING",
+    icon: "📈",
+    name: "AI DIGITAL MARKETING",
+    desc: "Data-driven marketing powered by AI. Automated ad campaigns, SEO optimization, social media management, and performance analytics that actually convert.",
+    tags: ["SEO", "Paid Ads", "Social Media", "Analytics"],
+  },
+  {
+    num: "06 — MCP",
+    icon: "🔌",
+    name: "MCP INTEGRATION",
+    desc: "Model Context Protocol integration for seamless AI tool connectivity. Connect Claude and other LLMs to your databases, APIs, and business tools.",
+    tags: ["Claude MCP", "Tool Use", "API Connectors", "Context"],
+  },
+  {
+    num: "07 — RAG",
+    icon: "🧠",
+    name: "RAG IMPLEMENTATION",
+    desc: "Retrieval-Augmented Generation systems that make AI smarter with your data. Build knowledge bases, document search, and context-aware AI responses.",
+    tags: ["Vector DB", "Embeddings", "Pinecone", "Knowledge Base"],
+  },
+  {
+    num: "08 — CHATBOTS",
+    icon: "💬",
+    name: "AI POWERED CHATBOTS",
+    desc: "Intelligent conversational agents for customer support, sales, and internal tools. 24/7 automation that actually understands context and solves problems.",
+    tags: ["GPT-4", "Claude", "WhatsApp", "Web Chat"],
+  },
+  {
+    num: "09 — LLM",
+    icon: "🤖",
+    name: "LLM INTEGRATION",
+    desc: "Integrate large language models into your products. From GPT-4 to Claude to open-source models — we build production-ready AI features that scale.",
+    tags: ["OpenAI", "Anthropic", "LangChain", "Fine-tuning"],
+  },
+  {
+    num: "10 — CONTENT",
+    icon: "✍️",
+    name: "AI CONTENT GENERATION",
+    desc: "Automated content at scale. Blog posts, social media, email campaigns, product descriptions — all trained on your brand voice and published automatically.",
+    tags: ["Brand Voice", "SEO Blogs", "Social Copy", "Auto-Publish"],
   },
 ];
 
 export default function Services() {
   return (
     <section className="py-24" id="services">
-      <div className="container max-w-5xl mx-auto">
+      <div className="container max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +107,7 @@ export default function Services() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: Math.min(index * 0.08, 0.5) }}
               className="group bg-neutral-900 border border-white/10 rounded-3xl p-6 hover:border-lime-400/50 transition-all duration-500 relative overflow-hidden"
             >
               {/* Hover Gradient Effect */}

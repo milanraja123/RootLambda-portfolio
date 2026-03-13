@@ -29,8 +29,8 @@ export default function Home() {
         <Integrations />
         <Faqs />
         <FinalCta />
-        <Footer />
       </div>
+      <Footer />
     </>
   );
 }
