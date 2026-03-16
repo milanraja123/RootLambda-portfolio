@@ -296,7 +296,7 @@ export default function AboutPage() {
               conversation about what you need.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
+              {/* <Link
                 href="https://wa.me/919999999999"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -304,7 +304,7 @@ export default function AboutPage() {
                 <Button variant="secondary" className="px-8 h-14 text-lg">
                   💬 WhatsApp Us
                 </Button>
-              </Link>
+              </Link> */}
               <Link href="/contact">
                 <Button variant="primary" className="px-8 h-14 text-lg">
                   ⚡ Book Free Call →

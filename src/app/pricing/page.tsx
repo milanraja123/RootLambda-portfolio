@@ -7,7 +7,7 @@ import Footer from "@/sections/Footer";
 import Tag from "@/components/Tag";
 import Link from "next/link";
 
-const pricingPlans = [
+/* const pricingPlans = [
   {
     name: "Starter",
     price: "25,000",
@@ -79,6 +79,36 @@ const pricingPlans = [
     popular: false,
     gradient: "from-orange-500/20",
   },
+]; */
+
+const benefits = [
+  {
+    icon: "🚀",
+    title: "Full AI-Powered Website",
+    desc: "Complete website with AI chatbot, automation, and smart features — built and deployed for you.",
+  },
+  {
+    icon: "💰",
+    title: "Pay Only for Hosting",
+    desc: "No development fees. No design charges. Just pay for your domain and hosting — that's it.",
+  },
+  {
+    icon: "⚡",
+    title: "Delivered in Days",
+    desc: "Your website goes live in 3-7 days. No months of waiting. No endless revisions.",
+  },
+  {
+    icon: "🎁",
+    title: "Everything Included",
+    desc: "Design, development, AI integration, deployment, and 30-day support — all free.",
+  },
+];
+
+const whyFree = [
+  "We believe great websites shouldn't cost lakhs",
+  "AI makes development 10x faster — we pass the savings to you",
+  "Your success is our portfolio — we grow when you grow",
+  "We make money from hosting partnerships, not development fees",
 ];
 
 export default function PricingPage() {
@@ -94,155 +124,155 @@ export default function PricingPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <Tag>Transparent Pricing</Tag>
+            <Tag>Revolutionary Pricing</Tag>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-6">
-              Fair pricing.
+              No Pricing.
               <br />
-              <span className="text-lime-400">Zero surprises.</span>
+              <span className="text-lime-400">Seriously.</span>
             </h1>
-            <p className="text-xl text-white/50 mt-6 max-w-2xl mx-auto">
-              Built for Indian startups and global founders. No agency markup.
-              No hidden costs. Fixed-price delivery.
+            <p className="text-xl text-white/50 mt-6 max-w-3xl mx-auto">
+              Why pay lakhs for web services? Just pay for hosting and get your
+              AI-powered website ready. We build it for free.
             </p>
           </motion.div>
 
-          {/* Pricing Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative group ${plan.popular ? "lg:-mt-4 lg:mb-4" : ""}`}
-              >
-                {/* Popular Badge */}
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10">
-                    <span className="px-4 py-1.5 bg-lime-400 text-neutral-950 text-xs font-bold rounded-full uppercase tracking-wider">
-                      Most Popular
+          {/* Main Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="bg-neutral-900 border border-lime-400/30 rounded-3xl p-8 md:p-12 overflow-hidden relative">
+              {/* Background Glow */}
+              <div className="absolute -right-40 -top-40 w-[400px] h-[400px] bg-lime-400/10 rounded-full blur-[120px] pointer-events-none" />
+              <div className="absolute -left-40 -bottom-40 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
+
+              <div className="relative z-10 text-center">
+                {/* Price Display */}
+                <div className="mb-8">
+                  <div className="inline-flex items-center gap-4">
+                    <span className="text-5xl md:text-6xl font-bold text-white/20 line-through">
+                      ₹50,000+
+                    </span>
+                    <span className="text-5xl md:text-6xl font-bold text-lime-400">
+                      ₹0
                     </span>
                   </div>
-                )}
-
-                {/* Card */}
-                <div
-                  className={`relative h-full bg-neutral-900 border rounded-3xl p-6 overflow-hidden transition-all duration-500 ${
-                    plan.popular
-                      ? "border-lime-400/50 hover:border-lime-400"
-                      : "border-white/10 hover:border-white/20"
-                  }`}
-                >
-                  {/* Gradient Glow */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-                  />
-
-                  <div className="relative z-10">
-                    {/* Plan Name */}
-                    <h3 className="text-lg font-semibold text-white/70 mb-4">
-                      {plan.name}
-                    </h3>
-
-                    {/* Price */}
-                    <div className="mb-4">
-                      <div className="flex items-baseline gap-1">
-                        <span className="text-white/50 text-xl">₹</span>
-                        <span className="text-4xl font-bold text-white">
-                          {plan.price}
-                        </span>
-                        <span className="text-white/50 text-sm">
-                          {plan.period}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Tagline */}
-                    <p className="text-white/40 text-sm mb-6 min-h-[40px]">
-                      {plan.tagline}
-                    </p>
-
-                    {/* Features */}
-                    <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature) => (
-                        <li
-                          key={feature}
-                          className="flex items-start gap-3 text-sm"
-                        >
-                          <span className="text-lime-400 mt-0.5">✓</span>
-                          <span className="text-white/70">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* CTA Button */}
-                    <Link href="/contact">
-                      <Button
-                        variant={plan.popular ? "primary" : "secondary"}
-                        className="w-full"
-                      >
-                        {plan.cta} →
-                      </Button>
-                    </Link>
-                  </div>
+                  <p className="text-white/50 mt-4 text-lg">
+                    Development cost for your AI-powered website
+                  </p>
                 </div>
-              </motion.div>
-            ))}
-          </div>
 
-          {/* Bottom Section */}
+                {/* What You Pay */}
+                <div className="bg-neutral-950/50 border border-white/10 rounded-2xl p-6 max-w-lg mx-auto mb-8">
+                  <p className="text-white/70 mb-2">What you actually pay:</p>
+                  <div className="flex items-center justify-center gap-2">
+                    <span className="text-3xl font-bold text-white">
+                      Hosting Only
+                    </span>
+                  </div>
+                  <p className="text-white/40 text-sm mt-2">
+                    ~₹500-2000/month depending on your needs
+                  </p>
+                </div>
+
+                {/* CTA */}
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <Link href="/contact">
+                    <Button variant="primary" className="px-8 h-14 text-lg">
+                      Get Your Free Website →
+                    </Button>
+                  </Link>
+                  {/* <Link href="https://wa.me/919999999999" target="_blank">
+                    <Button variant="secondary" className="px-8 h-14 text-lg">
+                      💬 Ask Us How
+                    </Button>
+                  </Link> */}
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Benefits Grid */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mt-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-medium text-center mb-12">
+              What you get for <span className="text-lime-400">₹0</span>
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {benefits.map((benefit, index) => (
+                <motion.div
+                  key={benefit.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                  className="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-lime-400/30 transition-all duration-300 group"
+                >
+                  <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">
+                    {benefit.icon}
+                  </span>
+                  <h3 className="text-lg font-semibold mb-2 group-hover:text-lime-400 transition-colors">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-white/50 text-sm">{benefit.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Why Free Section */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-20"
           >
-            {/* Custom Projects */}
-            <div className="bg-neutral-900 border border-white/10 rounded-3xl p-8 md:p-12">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <h3 className="text-3xl md:text-4xl font-medium mb-4">
-                    Need something{" "}
-                    <span className="text-lime-400">custom?</span>
-                  </h3>
-                  <p className="text-white/50 text-lg">
-                    Complex SaaS platforms, mobile apps, AI products, or
-                    enterprise solutions. We scope it, price it, and build it —
-                    all within your budget and timeline.
-                  </p>
-                </div>
-                <div className="flex flex-col sm:flex-row gap-4 md:justify-end">
-                  <Link href="/contact">
-                    <Button variant="primary">Book Free Call →</Button>
-                  </Link>
-                  <Link href="https://wa.me/919999999999" target="_blank">
-                    <Button variant="secondary">WhatsApp Us</Button>
-                  </Link>
-                </div>
+            <div className="bg-neutral-900/50 border border-white/10 rounded-3xl p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-medium mb-8 text-center">
+                Why is it <span className="text-lime-400">free?</span>
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
+                {whyFree.map((reason, index) => (
+                  <motion.div
+                    key={reason}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
+                    className="flex items-start gap-3"
+                  >
+                    <span className="text-lime-400 mt-1">✓</span>
+                    <span className="text-white/70">{reason}</span>
+                  </motion.div>
+                ))}
               </div>
             </div>
+          </motion.div>
 
-            {/* Trust Badges */}
-            <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-              {[
-                { icon: "🔒", text: "Fixed Price", sub: "No hidden costs" },
-                { icon: "⚡", text: "Fast Delivery", sub: "7 days average" },
-                { icon: "💯", text: "Full Ownership", sub: "Your code, your IP" },
-                { icon: "🤝", text: "Free Support", sub: "30 days included" },
-              ].map((badge, index) => (
-                <motion.div
-                  key={badge.text}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-                  className="text-center p-6 bg-neutral-900/50 border border-white/5 rounded-2xl"
-                >
-                  <span className="text-3xl mb-3 block">{badge.icon}</span>
-                  <p className="font-medium text-white">{badge.text}</p>
-                  <p className="text-sm text-white/40">{badge.sub}</p>
-                </motion.div>
-              ))}
-            </div>
+          {/* Bottom CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="mt-20 text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">
+              Ready to get your{" "}
+              <span className="text-lime-400">free website?</span>
+            </h2>
+            <p className="text-white/50 mb-8 max-w-xl mx-auto">
+              Book a free 30-minute call. We&apos;ll discuss your needs and show
+              you exactly what we&apos;ll build — no strings attached.
+            </p>
+            <Link href="/contact">
+              <Button variant="primary" className="px-10 h-16 text-xl">
+                Book Free Call →
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

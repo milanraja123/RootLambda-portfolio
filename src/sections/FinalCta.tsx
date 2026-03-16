@@ -37,7 +37,7 @@ export default function FinalCta() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium leading-[1.1]"
+                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.1]"
               >
                 LET&apos;S BUILD
                 <br />
@@ -73,14 +73,14 @@ export default function FinalCta() {
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto"
                 >
-                  <motion.button
+                  {/* <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] hover:bg-[#1fb855] text-white text-lg font-semibold rounded-full transition-all duration-300 shadow-lg shadow-[#25D366]/20"
                   >
                     <span className="text-2xl">💬</span>
                     WhatsApp Us Now
-                  </motion.button>
+                  </motion.button> */}
                 </Link>
 
                 <Link href="/contact" className="w-full sm:w-auto">
@@ -88,7 +88,7 @@ export default function FinalCta() {
                     variant="primary"
                     className="w-full sm:w-auto px-8 text-lg h-14"
                   >
-                    📧 Email Us →
+                    Email Us →
                   </Button>
                 </Link>
               </motion.div>

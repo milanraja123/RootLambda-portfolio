@@ -104,8 +104,8 @@ export default function AiInAction() {
   }, [activeTab, activeContent?.output]);
 
   return (
-    <section className="py-24" id="demo">
-      <div className="w-full px-4 md:px-8 lg:px-16 max-w-[1400px] mx-auto">
+    <section className="py-24 w-full" id="demo">
+      <div className="container max-w-6xl mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

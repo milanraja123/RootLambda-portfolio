@@ -162,28 +162,30 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-16 text-center"
+          className="mt-16 flex justify-center"
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 px-8 py-6 bg-neutral-900/50 border border-white/10 rounded-2xl">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-6 sm:gap-8 px-8 py-6 bg-neutral-900/50 border border-white/10 rounded-2xl">
             <div className="flex items-center gap-3">
               <span className="text-3xl">⏱️</span>
-              <div className="text-left">
+              <div className="text-center sm:text-left">
                 <p className="text-white font-medium">Average delivery</p>
                 <p className="text-lime-400 text-lg font-bold">7 days</p>
               </div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-white/10" />
+            <div className="w-full sm:w-auto h-px sm:h-auto bg-white/10 sm:hidden" />
             <div className="flex items-center gap-3">
               <span className="text-3xl">💰</span>
-              <div className="text-left">
+              <div className="text-center sm:text-left">
                 <p className="text-white font-medium">Starting from</p>
                 <p className="text-lime-400 text-lg font-bold">₹25,000</p>
               </div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-white/10" />
+            <div className="w-full sm:w-auto h-px sm:h-auto bg-white/10 sm:hidden" />
             <div className="flex items-center gap-3">
               <span className="text-3xl">🤝</span>
-              <div className="text-left">
+              <div className="text-center sm:text-left">
                 <p className="text-white font-medium">First call</p>
                 <p className="text-lime-400 text-lg font-bold">Free</p>
               </div>

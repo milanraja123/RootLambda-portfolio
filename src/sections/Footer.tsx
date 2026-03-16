@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 const pageLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About Us" },
-  { href: "/#services", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
 ];
@@ -28,7 +28,7 @@ export default function Footer() {
       {/* Top Gradient Border */}
       <div className="h-[1px] bg-gradient-to-r from-transparent via-lime-400/50 to-transparent" />
 
-      <div className="w-full px-8 md:px-16 lg:px-24 py-20 relative z-10">
+      <div className="container py-20 relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand Column */}
           <div className="lg:col-span-5">
