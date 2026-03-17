@@ -2,6 +2,7 @@ import Faqs from "@/sections/Faqs";
 import Features from "@/sections/Features";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
+import HeroAnimated from "@/sections/HeroAnimated";
 import Integrations from "@/sections/Integrations";
 import Introduction from "@/sections/Introduction";
 import LogoTicker from "@/sections/LogoTicker";
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <div className="w-full flex flex-col items-center justify-center overflow-clip">
         <Navbar />
+        <HeroAnimated />
         <Hero />
         <LogoTicker />
         <Introduction />
