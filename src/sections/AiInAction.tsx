@@ -115,10 +115,10 @@ export default function AiInAction() {
           className="text-center mb-12"
         >
           <Tag>AI In Action</Tag>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mt-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mt-6 text-text-primary">
             Don&apos;t take our word.
             <br />
-            <span className="text-lime-400">Watch it work.</span>
+            <span className="text-brand-primary">Watch it work.</span>
           </h2>
         </motion.div>
 
@@ -128,42 +128,42 @@ export default function AiInAction() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="bg-neutral-900 border border-white/10 rounded-2xl overflow-hidden"
+          className="bg-white dark:bg-bg-card border border-border-default rounded-2xl overflow-hidden shadow-card"
         >
           {/* Terminal Bar */}
-          <div className="flex items-center justify-between px-4 py-3 bg-neutral-950 border-b border-white/10">
+          <div className="flex items-center justify-between px-4 py-3 bg-bg-soft border-b border-border-default">
             {/* Dots */}
             <div className="flex gap-2">
-              <span className="w-3 h-3 rounded-full bg-red-500/80" />
-              <span className="w-3 h-3 rounded-full bg-yellow-500/80" />
-              <span className="w-3 h-3 rounded-full bg-green-500/80" />
+              <span className="w-3 h-3 rounded-full bg-red-400" />
+              <span className="w-3 h-3 rounded-full bg-yellow-400" />
+              <span className="w-3 h-3 rounded-full bg-green-400" />
             </div>
 
             {/* Title */}
-            <div className="text-xs text-white/40 font-mono tracking-wider hidden sm:block">
+            <div className="text-xs text-text-muted font-mono tracking-wider hidden sm:block">
               ROOTLAMBDA AI ENGINE · LIVE DEMO
             </div>
 
             {/* Live Indicator */}
             <div className="flex items-center gap-2">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-400" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-primary" />
               </span>
-              <span className="text-xs text-lime-400 font-medium">LIVE</span>
+              <span className="text-xs text-brand-primary font-medium">LIVE</span>
             </div>
           </div>
 
           {/* Tabs */}
-          <div className="flex gap-1 p-2 bg-neutral-950/50 border-b border-white/5 overflow-x-auto">
+          <div className="flex gap-1 p-2 bg-bg-section border-b border-border-default overflow-x-auto">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap ${
                   activeTab === tab.id
-                    ? "bg-lime-400/20 text-lime-400 border border-lime-400/30"
-                    : "text-white/50 hover:text-white hover:bg-white/5"
+                    ? "bg-brand-primary/10 text-brand-primary border border-brand-primary/30"
+                    : "text-text-secondary hover:text-text-primary hover:bg-bg-soft"
                 }`}
               >
                 <span>{tab.icon}</span>
@@ -173,29 +173,29 @@ export default function AiInAction() {
           </div>
 
           {/* Terminal Body */}
-          <div className="p-6 min-h-[350px] font-mono text-sm">
+          <div className="p-6 min-h-[350px] font-mono text-sm bg-bg-main">
             {/* Prompt */}
             <div className="flex gap-2 mb-6">
-              <span className="text-purple-400">λ &gt;</span>
-              <span className="text-white/70">{activeContent?.prompt}</span>
+              <span className="text-brand-secondary">λ &gt;</span>
+              <span className="text-text-secondary">{activeContent?.prompt}</span>
             </div>
 
             {/* Output */}
-            <div className="text-lime-400/90 whitespace-pre-wrap leading-relaxed">
+            <div className="text-brand-primary whitespace-pre-wrap leading-relaxed">
               {displayedText}
               {isTyping && (
-                <span className="inline-block w-2 h-4 bg-lime-400 ml-1 animate-pulse" />
+                <span className="inline-block w-2 h-4 bg-brand-primary ml-1 animate-pulse" />
               )}
             </div>
           </div>
 
           {/* Bottom Bar */}
-          <div className="px-6 py-3 bg-neutral-950/50 border-t border-white/5 flex items-center justify-between">
+          <div className="px-6 py-3 bg-bg-section border-t border-border-default flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <span className="text-xs text-white/30">Powered by Claude + GPT-4</span>
+              <span className="text-xs text-text-muted">Powered by Claude + GPT-4</span>
             </div>
-            <div className="flex items-center gap-2 text-xs text-white/30">
-              <span className="w-1.5 h-1.5 rounded-full bg-lime-400" />
+            <div className="flex items-center gap-2 text-xs text-text-muted">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-primary" />
               <span>Response time: ~1.2s</span>
             </div>
           </div>

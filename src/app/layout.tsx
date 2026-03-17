@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -24,12 +25,19 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className={cn("font-sans", geist.variable)}>
+        <html lang="en" className={cn("font-sans", geist.variable)} suppressHydrationWarning>
             <body
-                className={`${inter.variable} font-sans antialiased bg-neutral-950 text-white`}
+                className={`${inter.variable} font-sans antialiased bg-bg-main text-text-primary`}
             >
-                <CustomCursor />
-                {children}
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="light"
+                    enableSystem
+                    disableTransitionOnChange={false}
+                >
+                    <CustomCursor />
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     );

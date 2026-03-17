@@ -48,7 +48,7 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="min-h-[60vh] flex flex-col justify-end py-24 relative overflow-hidden">
         {/* Glow Effect */}
-        <div className="absolute -left-32 -top-32 w-[500px] h-[500px] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute -left-32 -top-32 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container max-w-6xl mx-auto">
           <motion.div
@@ -63,11 +63,11 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-medium mt-6 leading-[0.95]"
+            className="text-5xl md:text-7xl lg:text-8xl font-medium mt-6 leading-[0.95] text-text-primary"
           >
             Built different.
             <br />
-            <span className="text-transparent" style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.2)" }}>
+            <span className="text-stroke-outline">
               On purpose.
             </span>
           </motion.h1>
@@ -76,7 +76,7 @@ export default function AboutPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-lg text-white/50 mt-6 max-w-xl leading-relaxed"
+            className="text-lg text-text-secondary mt-6 max-w-xl leading-relaxed"
           >
             We are RootLambda — an AI-native studio from Delhi NCR. Not a
             traditional agency. Something built for what business actually needs
@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* Border */}
-      <div className="border-t border-white/5" />
+      <div className="border-t border-border-default" />
 
       {/* Who We Are Section */}
       <section className="py-24">
@@ -100,11 +100,11 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
             >
               <Tag>Who We Are</Tag>
-              <h2 className="text-4xl md:text-5xl font-medium mt-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl font-medium mt-6 leading-tight text-text-primary">
                 An AI studio that builds things that{" "}
-                <span className="text-lime-400">actually work.</span>
+                <span className="text-brand-primary">actually work.</span>
               </h2>
-              <p className="text-white/50 mt-6 leading-relaxed">
+              <p className="text-text-secondary mt-6 leading-relaxed">
                 RootLambda Technologies is a digital studio where AI is not an
                 add-on — it is the engine. We build websites, apps, content
                 systems, and automation tools for startups and businesses who
@@ -118,7 +118,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="space-y-[1px] bg-white/5"
+              className="space-y-[1px] bg-border-default"
             >
               {stats.map((stat, index) => (
                 <motion.div
@@ -127,12 +127,12 @@ export default function AboutPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 + index * 0.1 }}
-                  className="bg-neutral-950 p-7 hover:bg-neutral-900/50 transition-colors duration-300 group"
+                  className="bg-white dark:bg-bg-card p-7 hover:bg-bg-soft transition-colors duration-300 group"
                 >
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-400 to-lime-400 bg-clip-text text-transparent">
+                  <div className="text-4xl md:text-5xl font-bold text-gradient-brand">
                     {stat.value}
                   </div>
-                  <div className="text-white/50 text-sm mt-1">{stat.label}</div>
+                  <div className="text-text-secondary text-sm mt-1">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -141,10 +141,10 @@ export default function AboutPage() {
       </section>
 
       {/* Border */}
-      <div className="border-t border-white/5" />
+      <div className="border-t border-border-default" />
 
       {/* Story Section */}
-      <section className="py-24">
+      <section className="py-24 bg-bg-section">
         <div className="container max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -153,27 +153,27 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <Tag>Our Story</Tag>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mt-6 leading-tight max-w-4xl">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium mt-6 leading-tight max-w-4xl text-text-primary">
               We watched businesses around us{" "}
-              <span className="text-white/40">pay lakhs for slow agencies</span>{" "}
-              and get <span className="text-lime-400">mediocre results.</span>{" "}
+              <span className="text-text-muted">pay lakhs for slow agencies</span>{" "}
+              and get <span className="text-brand-primary">mediocre results.</span>{" "}
               We knew there was a better way.
             </h2>
 
             <div className="grid md:grid-cols-2 gap-12 mt-12">
-              <p className="text-white/50 leading-relaxed">
+              <p className="text-text-secondary leading-relaxed">
                 RootLambda was born from a simple frustration. Businesses —
                 restaurants, clinics, startups, retailers — struggling with bad
                 websites, no automation, and content that never got made.
                 Agencies charging lakhs to solve problems that{" "}
-                <strong className="text-white">
+                <strong className="text-text-primary">
                   AI could handle in hours.
                 </strong>
               </p>
-              <p className="text-white/50 leading-relaxed">
+              <p className="text-text-secondary leading-relaxed">
                 We came from software development backgrounds and understood AI
                 from the inside. So we built a studio where{" "}
-                <strong className="text-white">
+                <strong className="text-text-primary">
                   intelligence is the foundation
                 </strong>{" "}
                 — not a feature. Today we work with clients across India and
@@ -185,7 +185,7 @@ export default function AboutPage() {
       </section>
 
       {/* Border */}
-      <div className="border-t border-white/5" />
+      <div className="border-t border-border-default" />
 
       {/* Beliefs Section */}
       <section className="py-24">
@@ -197,14 +197,14 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <Tag>What We Stand For</Tag>
-            <h2 className="text-4xl md:text-5xl font-medium mt-6">
+            <h2 className="text-4xl md:text-5xl font-medium mt-6 text-text-primary">
               We believe in
               <br />
-              <span className="text-lime-400">four things.</span>
+              <span className="text-brand-primary">four things.</span>
             </h2>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-[1px] bg-white/5 mt-12">
+          <div className="grid md:grid-cols-2 gap-[1px] bg-border-default mt-12">
             {beliefs.map((belief, index) => (
               <motion.div
                 key={belief.title}
@@ -212,16 +212,16 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="relative bg-neutral-950 p-8 overflow-hidden group hover:bg-neutral-900/30 transition-colors duration-300"
+                className="relative bg-white dark:bg-bg-card p-8 overflow-hidden group hover:bg-bg-soft transition-colors duration-300"
               >
                 {/* Top Border on Hover */}
-                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-500 to-lime-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-brand transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
 
                 <span className="text-3xl">{belief.icon}</span>
-                <h3 className="text-xl font-semibold mt-4 mb-2 group-hover:text-lime-400 transition-colors duration-300">
+                <h3 className="text-xl font-semibold mt-4 mb-2 text-text-primary group-hover:text-brand-primary transition-colors duration-300">
                   {belief.title}
                 </h3>
-                <p className="text-white/50 text-sm leading-relaxed">
+                <p className="text-text-secondary text-sm leading-relaxed">
                   {belief.description}
                 </p>
               </motion.div>
@@ -231,7 +231,7 @@ export default function AboutPage() {
       </section>
 
       {/* Border */}
-      <div className="border-t border-white/5" />
+      <div className="border-t border-border-default" />
 
       {/* Lambda Section */}
       <section className="py-24">
@@ -245,7 +245,7 @@ export default function AboutPage() {
           >
             {/* Lambda Symbol */}
             <div className="text-center lg:text-left">
-              <span className="text-[140px] md:text-[180px] font-bold leading-none bg-gradient-to-br from-purple-500 to-lime-400 bg-clip-text text-transparent opacity-80">
+              <span className="text-[140px] md:text-[180px] font-bold leading-none text-gradient-brand opacity-80">
                 λ
               </span>
             </div>
@@ -253,14 +253,14 @@ export default function AboutPage() {
             {/* Content */}
             <div>
               <Tag>Why RootLambda</Tag>
-              <h3 className="text-3xl md:text-4xl font-medium mt-4 mb-4">
-                The name means <span className="text-lime-400">something.</span>
+              <h3 className="text-3xl md:text-4xl font-medium mt-4 mb-4 text-text-primary">
+                The name means <span className="text-brand-primary">something.</span>
               </h3>
-              <p className="text-white/50 leading-relaxed max-w-xl">
+              <p className="text-text-secondary leading-relaxed max-w-xl">
                 In mathematics,{" "}
-                <strong className="text-white">lambda (λ)</strong> is a function
+                <strong className="text-text-primary">lambda (λ)</strong> is a function
                 — the transformation of input into output.{" "}
-                <strong className="text-white">Root</strong> is the foundation.
+                <strong className="text-text-primary">Root</strong> is the foundation.
                 The origin. The source.
                 <br />
                 <br />
@@ -274,7 +274,7 @@ export default function AboutPage() {
       </section>
 
       {/* Border */}
-      <div className="border-t border-white/5" />
+      <div className="border-t border-border-default" />
 
       {/* CTA Section */}
       <section className="py-24">
@@ -286,12 +286,12 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-4 leading-tight text-text-primary">
               Ready to build
               <br />
-              something <span className="text-lime-400">real?</span>
+              something <span className="text-brand-primary">real?</span>
             </h2>
-            <p className="text-white/50 max-w-md mx-auto mb-10 leading-relaxed">
+            <p className="text-text-secondary max-w-md mx-auto mb-10 leading-relaxed">
               Free 30-min discovery call. No pitch deck. Just an honest
               conversation about what you need.
             </p>

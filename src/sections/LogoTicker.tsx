@@ -16,9 +16,9 @@ const tickerItems = [
 
 export default function LogoTicker() {
   return (
-    <section className="py-24">
+    <section className="py-24 bg-bg-section">
       <div className="container">
-        <h3 className="text-center text-white/50 text-xl">
+        <h3 className="text-center text-text-secondary text-xl">
           Already chosen by these market leaders
         </h3>
         <div className="overflow-hidden mt-12 [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
@@ -38,11 +38,11 @@ export default function LogoTicker() {
                 {tickerItems.map((item) => (
                   <span
                     key={item.text}
-                    className="flex items-center gap-3 text-white/70 text-xl font-medium whitespace-nowrap"
+                    className="flex items-center gap-3 text-text-secondary text-xl font-medium whitespace-nowrap"
                   >
                     <span className="text-2xl">{item.icon}</span>
                     <span>{item.text}</span>
-                    <span className="text-lime-400 ml-12">{"///"}</span>
+                    <span className="text-brand-primary ml-12">{"///"}</span>
                   </span>
                 ))}
               </Fragment>

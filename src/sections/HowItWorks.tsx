@@ -46,11 +46,11 @@ export default function HowItWorks() {
           className="text-center mb-20"
         >
           <Tag>Our Process</Tag>
-          <h2 className="text-5xl md:text-6xl font-medium mt-6">
+          <h2 className="text-5xl md:text-6xl font-medium mt-6 text-text-primary">
             From idea to{" "}
-            <span className="text-lime-400">live in 3 steps</span>
+            <span className="text-brand-primary">live in 3 steps</span>
           </h2>
-          <p className="text-xl text-white/50 mt-6 max-w-2xl mx-auto">
+          <p className="text-xl text-text-secondary mt-6 max-w-2xl mx-auto">
             No bloated agencies. No months of wireframes. We move at startup
             speed — because you can&apos;t afford to wait.
           </p>
@@ -81,14 +81,14 @@ export default function HowItWorks() {
                 className="relative group"
               >
                 {/* Step Card */}
-                <div className="relative bg-neutral-900 border border-white/10 rounded-3xl p-8 h-full hover:border-white/20 transition-all duration-500 overflow-hidden">
+                <div className="relative bg-white dark:bg-bg-card border border-border-default rounded-3xl p-8 h-full hover:border-brand-primary/30 hover:shadow-card transition-all duration-500 overflow-hidden">
                   {/* Gradient Glow on Hover */}
                   <div
-                    className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
+                    className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                   />
 
                   {/* Step Number - Large Background */}
-                  <div className="absolute -right-4 -top-4 text-[120px] font-bold text-white/[0.03] leading-none select-none">
+                  <div className="absolute -right-4 -top-4 text-[120px] font-bold text-text-primary/[0.03] leading-none select-none">
                     {step.num}
                   </div>
 
@@ -96,7 +96,7 @@ export default function HowItWorks() {
                   <div className="relative z-10">
                     {/* Icon + Number Row */}
                     <div className="flex items-center justify-between mb-6">
-                      <div className="size-16 bg-neutral-800 rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
+                      <div className="size-16 bg-bg-soft rounded-2xl flex items-center justify-center text-3xl group-hover:scale-110 transition-transform duration-300">
                         {step.icon}
                       </div>
                       <div
@@ -107,19 +107,19 @@ export default function HowItWorks() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-lime-400 transition-colors duration-300">
+                    <h3 className="text-xl font-semibold mb-3 text-text-primary group-hover:text-brand-primary transition-colors duration-300">
                       {step.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="text-white/50 leading-relaxed mb-6">
+                    <p className="text-text-secondary leading-relaxed mb-6">
                       {step.description}
                     </p>
 
                     {/* Time Badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full">
-                      <span className="size-2 rounded-full bg-lime-400 animate-pulse" />
-                      <span className="text-sm text-white/70 font-medium">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-bg-soft border border-border-default rounded-full">
+                      <span className="size-2 rounded-full bg-brand-primary animate-pulse" />
+                      <span className="text-sm text-text-secondary font-medium">
                         {step.time}
                       </span>
                     </div>
@@ -133,7 +133,7 @@ export default function HowItWorks() {
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.2 }}
-                    className={`size-4 rounded-full bg-gradient-to-r ${step.gradient} ring-4 ring-neutral-950`}
+                    className={`size-4 rounded-full bg-gradient-to-r ${step.gradient} ring-4 ring-bg-main`}
                   />
                 </div>
 
@@ -145,7 +145,7 @@ export default function HowItWorks() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.4, delay: 0.3 }}
-                      className="text-lime-400 text-2xl"
+                      className="text-brand-primary text-2xl"
                     >
                       ↓
                     </motion.div>
@@ -164,30 +164,30 @@ export default function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-16 flex justify-center"
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-6 sm:gap-8 px-8 py-6 bg-neutral-900/50 border border-white/10 rounded-2xl">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-6 sm:gap-8 px-8 py-6 bg-white dark:bg-bg-card border border-border-default rounded-2xl shadow-sm">
             <div className="flex items-center gap-3">
               <span className="text-3xl">⏱️</span>
               <div className="text-center sm:text-left">
-                <p className="text-white font-medium">Average delivery</p>
-                <p className="text-lime-400 text-lg font-bold">7 days</p>
+                <p className="text-text-primary font-medium">Average delivery</p>
+                <p className="text-brand-primary text-lg font-bold">7 days</p>
               </div>
             </div>
-            <div className="hidden sm:block w-px h-12 bg-white/10" />
-            <div className="w-full sm:w-auto h-px sm:h-auto bg-white/10 sm:hidden" />
+            <div className="hidden sm:block w-px h-12 bg-border-default" />
+            <div className="w-full sm:w-auto h-px sm:h-auto bg-border-default sm:hidden" />
             <div className="flex items-center gap-3">
               <span className="text-3xl">💰</span>
               <div className="text-center sm:text-left">
-                <p className="text-white font-medium">Starting from</p>
-                <p className="text-lime-400 text-lg font-bold">₹25,000</p>
+                <p className="text-text-primary font-medium">Starting from</p>
+                <p className="text-brand-primary text-lg font-bold">₹25,000</p>
               </div>
             </div>
-            <div className="hidden sm:block w-px h-12 bg-white/10" />
-            <div className="w-full sm:w-auto h-px sm:h-auto bg-white/10 sm:hidden" />
+            <div className="hidden sm:block w-px h-12 bg-border-default" />
+            <div className="w-full sm:w-auto h-px sm:h-auto bg-border-default sm:hidden" />
             <div className="flex items-center gap-3">
               <span className="text-3xl">🤝</span>
               <div className="text-center sm:text-left">
-                <p className="text-white font-medium">First call</p>
-                <p className="text-lime-400 text-lg font-bold">Free</p>
+                <p className="text-text-primary font-medium">First call</p>
+                <p className="text-brand-primary text-lg font-bold">Free</p>
               </div>
             </div>
           </div>

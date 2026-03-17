@@ -16,16 +16,16 @@ export default function FinalCta() {
           className="relative"
         >
           {/* Main Card */}
-          <div className="relative bg-neutral-900 border border-white/10 rounded-[40px] p-12 md:p-16 lg:p-20 overflow-hidden">
+          <div className="relative bg-white dark:bg-bg-card border border-border-default rounded-[40px] p-12 md:p-16 lg:p-20 overflow-hidden shadow-elevated">
             {/* Background Gradients */}
-            <div className="absolute top-0 left-0 w-96 h-96 bg-lime-400/10 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2" />
+            <div className="absolute top-0 left-0 w-96 h-96 bg-brand-primary/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-brand-secondary/5 rounded-full blur-[120px] translate-x-1/2 translate-y-1/2" />
 
             {/* Decorative Stars */}
-            <div className="absolute top-8 right-8 md:top-12 md:right-12 text-lime-400/20 text-6xl md:text-8xl">
+            <div className="absolute top-8 right-8 md:top-12 md:right-12 text-brand-primary/20 text-6xl md:text-8xl">
               ✶
             </div>
-            <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 text-purple-400/20 text-4xl md:text-6xl">
+            <div className="absolute bottom-8 left-8 md:bottom-12 md:left-12 text-brand-secondary/20 text-4xl md:text-6xl">
               ✶
             </div>
 
@@ -37,11 +37,11 @@ export default function FinalCta() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.1]"
+                className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium leading-[1.1] text-text-primary"
               >
                 LET&apos;S BUILD
                 <br />
-                <span className="bg-gradient-to-r from-lime-400 via-green-400 to-emerald-400 bg-clip-text text-transparent">
+                <span className="text-gradient-brand">
                   SOMETHING REAL.
                 </span>
               </motion.h2>
@@ -52,7 +52,7 @@ export default function FinalCta() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-lg md:text-xl text-white/50 mt-8 md:mt-10 leading-relaxed"
+                className="text-lg md:text-xl text-text-secondary mt-8 md:mt-10 leading-relaxed"
               >
                 You have the idea. We have the speed. Book a free 30-min call
                 and let&apos;s turn it into a live product, content machine, and
@@ -101,9 +101,9 @@ export default function FinalCta() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mt-12 md:mt-16"
               >
-                <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/5 border border-white/10 rounded-full">
-                  <span className="size-2 bg-lime-400 rounded-full animate-pulse" />
-                  <span className="text-sm text-white/40 tracking-wide">
+                <div className="inline-flex items-center gap-3 px-6 py-3 bg-bg-soft border border-border-default rounded-full">
+                  <span className="size-2 bg-brand-primary rounded-full animate-pulse" />
+                  <span className="text-sm text-text-muted tracking-wide">
                     Response within 2 hours · Mon–Sat · India timezone
                   </span>
                 </div>

@@ -42,25 +42,25 @@ export default function Faqs() {
         <div className="flex justify-center">
           <Tag>FAQ</Tag>
         </div>
-        <h2 className="text-6xl font-medium mt-6 text-center max-w-xl mx-auto">
+        <h2 className="text-6xl font-medium mt-6 text-center max-w-xl mx-auto text-text-primary">
           Questions we{" "}
-          <span className="text-lime-400">always get asked</span>
+          <span className="text-brand-primary">always get asked</span>
         </h2>
-        <p className="text-center text-white/50 mt-4">
+        <p className="text-center text-text-secondary mt-4">
           Real answers. No agency fluff.
         </p>
         <div className="mt-12 flex flex-col gap-6 max-w-xl mx-auto">
           {faqs.map((faq, faqIndex) => (
             <div
               key={faq?.question}
-              className="bg-neutral-900 roundeed-2xl border border-white/10 p-6"
+              className="bg-white dark:bg-bg-card rounded-2xl border border-border-default p-6 cursor-pointer hover:border-brand-primary/30 transition-colors"
               onClick={() => setSelectedIndex(faqIndex)}
             >
               <div className="flex justify-between items-center">
-                <h3 className="font-medium">{faq.question}</h3>
+                <h3 className="font-medium text-text-primary">{faq.question}</h3>
                 <FiPlus
                   className={twMerge(
-                    "text-lime-400 transition duration-500",
+                    "text-brand-primary transition duration-500",
                     selectedIndex === faqIndex && "rotate-45"
                   )}
                   size={25}
@@ -83,7 +83,7 @@ export default function Faqs() {
                     }}
                     className={twMerge("overflow-hidden")}
                   >
-                    <p className="text-white/50">{faq.answer}</p>
+                    <p className="text-text-secondary">{faq.answer}</p>
                   </motion.div>
                 )}
               </AnimatePresence>

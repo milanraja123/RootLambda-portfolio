@@ -73,10 +73,10 @@ export default function Integrations() {
         <div className="grid lg:grid-cols-2 items-center lg:gap-16">
           <div>
             <Tag>Our Arsenal</Tag>
-            <h2 className="text-6xl font-medium mt-6">
-              Built with the <span className="text-lime-400">best tools</span>
+            <h2 className="text-6xl font-medium mt-6 text-text-primary">
+              Built with the <span className="text-brand-primary">best tools</span>
             </h2>
-            <p className="text-white/50 mt-4 text-lg">
+            <p className="text-text-secondary mt-4 text-lg">
               We use AI-accelerated tools to ship faster — and industry-standard
               tech so your codebase is never a hostage.
             </p>

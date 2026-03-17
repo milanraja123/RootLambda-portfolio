@@ -34,15 +34,15 @@ const IntegrationColumn: React.FC<Props> = (props) => {
             {integrations?.map((integration) => (
               <div
                 key={integration.name}
-                className="bg-neutral-900 border border-white/10 rounded-3xl p-6"
+                className="bg-white dark:bg-bg-card border border-border-default rounded-3xl p-6 hover:border-brand-primary/30 hover:shadow-card transition-all duration-300"
               >
                 <div className="flex justify-center">
                   <span className="text-6xl">{integration.icon}</span>
                 </div>
-                <h3 className="text-3xl text-center mt-6">
+                <h3 className="text-3xl text-center mt-6 text-text-primary">
                   {integration.name}
                 </h3>
-                <p className="text-center text-white/50 mt-2">
+                <p className="text-center text-text-secondary mt-2">
                   {integration.description}
                 </p>
               </div>

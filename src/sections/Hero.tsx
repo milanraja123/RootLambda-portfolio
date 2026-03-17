@@ -94,23 +94,20 @@ export default function Hero() {
           <Pointer name="Bryan" color="red" />
         </motion.div> */}
         <div className="flex justify-center">
-          <div className="inline-flex py-1 px-3 bg-gradient-to-r from-purple-400 to-lime-400 rounded-full text-neutral-950 font-semibold">
+          <div className="inline-flex py-1 px-3 bg-gradient-brand rounded-full text-white font-semibold">
             🚀 AI-Native Digital Studio
           </div>
         </div>
         <div className="flex flex-col items-center mt-6">
           {/* Mobile Version - Static Text */}
           <h1 className="md:hidden text-4xl sm:text-5xl font-medium text-center leading-tight">
-            <span className="text-white">BUILD SMARTER.</span>
+            <span className="text-text-primary">BUILD SMARTER.</span>
             <br />
-            <span className="bg-gradient-to-r from-purple-400 to-lime-400 bg-clip-text text-transparent">
+            <span className="text-gradient-brand">
               GROW FASTER.
             </span>
             <br />
-            <span
-              className="text-transparent"
-              style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.3)" }}
-            >
+            <span className="text-stroke-outline">
               THINK AI.
             </span>
           </h1>
@@ -119,34 +116,31 @@ export default function Hero() {
           <div className="hidden md:block">
             <TypewriterEffectSmooth
               words={[
-                { text: "BUILD", className: "text-white" },
-                { text: "SMARTER.", className: "text-white" },
-                { text: "GROW", className: "bg-gradient-to-r from-purple-400 to-lime-400 bg-clip-text text-transparent" },
-                { text: "FASTER.", className: "bg-gradient-to-r from-purple-400 to-lime-400 bg-clip-text text-transparent" },
+                { text: "BUILD", className: "text-text-primary" },
+                { text: "SMARTER.", className: "text-text-primary" },
+                { text: "GROW", className: "text-gradient-brand" },
+                { text: "FASTER.", className: "text-gradient-brand" },
               ]}
               className="text-6xl lg:text-7xl font-medium"
-              cursorClassName="bg-lime-400"
+              cursorClassName="bg-brand-primary"
             />
             <h1 className="text-6xl lg:text-7xl font-medium text-center leading-tight">
-              <span
-                className="text-transparent"
-                style={{ WebkitTextStroke: "1.5px rgba(255,255,255,0.3)" }}
-              >
+              <span className="text-stroke-outline">
                 THINK AI.
               </span>
             </h1>
           </div>
         </div>
-        <p className="text-center text-xl text-white/50 mt-8 max-w-2xl mx-auto">
+        <p className="text-center text-xl text-text-secondary mt-8 max-w-2xl mx-auto">
           RootLambda wires AI into everything — your website, your app, your
           content, your videos, your marketing. We don&apos;t just build. We
           build systems that grow while you sleep.
         </p>
-        <form className="flex border border-white/15 rounded-full p-2 mt-8 max-w-lg mx-auto">
+        <form className="flex border border-border-default rounded-full p-2 mt-8 max-w-lg mx-auto bg-white shadow-sm">
           <input
             type="email"
             placeholder="Enter your email"
-            className="bg-transparent w-full px-4 md:flex-1"
+            className="bg-transparent w-full px-4 md:flex-1 text-text-primary placeholder:text-text-muted"
           />
           <Button
             variant="primary"

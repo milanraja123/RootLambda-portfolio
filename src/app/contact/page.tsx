@@ -89,13 +89,13 @@ export default function ContactPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex py-1 px-3 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full text-neutral-950 font-semibold mb-6">
+            <div className="inline-flex py-1 px-3 bg-gradient-brand rounded-full text-white font-semibold mb-6">
               Get In Touch
             </div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-4 leading-tight">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-4 leading-tight text-text-primary">
               LET&apos;S BUILD
               <br />
-              <span className="text-lime-400">SOMETHING REAL.</span>
+              <span className="text-brand-primary">SOMETHING REAL.</span>
             </h1>
           </motion.div>
 
@@ -107,7 +107,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="md:col-span-2 space-y-6"
             >
-              <p className="text-white/50 text-base leading-relaxed mb-8">
+              <p className="text-text-secondary text-base leading-relaxed mb-8">
                 You have the idea. We have the speed. Fill the form or reach us
                 directly — we respond within 2 hours, Mon–Sat.
               </p>
@@ -122,14 +122,14 @@ export default function ContactPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                    className="flex items-center gap-4 bg-neutral-900 border border-white/10 rounded-2xl p-4 hover:border-lime-400/50 transition-all duration-300 group"
+                    className="flex items-center gap-4 bg-white dark:bg-bg-card border border-border-default rounded-2xl p-4 hover:border-brand-primary/30 hover:shadow-card transition-all duration-300 group"
                   >
-                    <div className="size-12 bg-neutral-800 rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
+                    <div className="size-12 bg-bg-soft rounded-xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300">
                       {info.icon}
                     </div>
                     <div>
-                      <p className="text-white/50 text-sm">{info.title}</p>
-                      <p className="text-white font-medium">{info.value}</p>
+                      <p className="text-text-muted text-sm">{info.title}</p>
+                      <p className="text-text-primary font-medium">{info.value}</p>
                     </div>
                   </motion.a>
                 ))}
@@ -143,7 +143,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="md:col-span-3"
             >
-              <div className="bg-neutral-900 border border-white/10 rounded-3xl p-8">
+              <div className="bg-white dark:bg-bg-card border border-border-default rounded-3xl p-8 shadow-card">
                 {submitted ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -151,8 +151,8 @@ export default function ContactPage() {
                     className="text-center py-12"
                   >
                     <div className="text-6xl mb-6">🚀</div>
-                    <h3 className="text-2xl font-medium mb-2">MESSAGE SENT!</h3>
-                    <p className="text-white/50 max-w-sm mx-auto">
+                    <h3 className="text-2xl font-medium mb-2 text-text-primary">MESSAGE SENT!</h3>
+                    <p className="text-text-secondary max-w-sm mx-auto">
                       We&apos;ll WhatsApp you within 2 hours to schedule your free
                       discovery call. Get ready to build something real.
                     </p>
@@ -171,7 +171,7 @@ export default function ContactPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: 0.4 }}
                     >
-                      <h3 className="text-xl font-semibold text-lime-400 mb-6">
+                      <h3 className="text-xl font-semibold text-brand-primary mb-6">
                         BOOK A FREE CALL
                       </h3>
                     </motion.div>
@@ -182,7 +182,7 @@ export default function ContactPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: 0.5 }}
                       >
-                        <label className="block text-white/50 text-sm mb-2">
+                        <label className="block text-text-secondary text-sm mb-2">
                           Your Name
                         </label>
                         <input
@@ -192,7 +192,7 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder="Rahul Sharma"
-                          className="w-full bg-neutral-950 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-lime-400 transition-colors duration-300"
+                          className="w-full bg-bg-main border border-border-default rounded-xl px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-brand-primary transition-colors duration-300"
                         />
                       </motion.div>
                       <motion.div
@@ -200,7 +200,7 @@ export default function ContactPage() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: 0.55 }}
                       >
-                        <label className="block text-white/50 text-sm mb-2">
+                        <label className="block text-text-secondary text-sm mb-2">
                           Email Address
                         </label>
                         <input
@@ -210,7 +210,7 @@ export default function ContactPage() {
                           onChange={handleChange}
                           required
                           placeholder="rahul@startup.com"
-                          className="w-full bg-neutral-950 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-lime-400 transition-colors duration-300"
+                          className="w-full bg-bg-main border border-border-default rounded-xl px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-brand-primary transition-colors duration-300"
                         />
                       </motion.div>
                     </div>
@@ -220,7 +220,7 @@ export default function ContactPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: 0.6 }}
                     >
-                      <label className="block text-white/50 text-sm mb-2">
+                      <label className="block text-text-secondary text-sm mb-2">
                         What do you need?
                       </label>
                       <select
@@ -228,7 +228,7 @@ export default function ContactPage() {
                         value={formData.service}
                         onChange={handleChange}
                         required
-                        className="w-full bg-neutral-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-lime-400 transition-colors duration-300 appearance-none cursor-pointer"
+                        className="w-full bg-bg-main border border-border-default rounded-xl px-4 py-3 text-text-primary focus:outline-none focus:border-brand-primary transition-colors duration-300 appearance-none cursor-pointer"
                         style={{
                           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
                           backgroundRepeat: "no-repeat",
@@ -236,11 +236,11 @@ export default function ContactPage() {
                           backgroundSize: "1.5rem",
                         }}
                       >
-                        <option value="" className="bg-neutral-950">
+                        <option value="" className="bg-white dark:bg-bg-card">
                           Select a service...
                         </option>
                         {serviceOptions.map((option) => (
-                          <option key={option} value={option} className="bg-neutral-950">
+                          <option key={option} value={option} className="bg-white dark:bg-bg-card">
                             {option}
                           </option>
                         ))}
@@ -252,7 +252,7 @@ export default function ContactPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: 0.65 }}
                     >
-                      <label className="block text-white/50 text-sm mb-2">
+                      <label className="block text-text-secondary text-sm mb-2">
                         Budget Range
                       </label>
                       <select
@@ -260,7 +260,7 @@ export default function ContactPage() {
                         value={formData.budget}
                         onChange={handleChange}
                         required
-                        className="w-full bg-neutral-950 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-lime-400 transition-colors duration-300 appearance-none cursor-pointer"
+                        className="w-full bg-bg-main border border-border-default rounded-xl px-4 py-3 text-text-primary focus:outline-none focus:border-brand-primary transition-colors duration-300 appearance-none cursor-pointer"
                         style={{
                           backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23666'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`,
                           backgroundRepeat: "no-repeat",
@@ -268,11 +268,11 @@ export default function ContactPage() {
                           backgroundSize: "1.5rem",
                         }}
                       >
-                        <option value="" className="bg-neutral-950">
+                        <option value="" className="bg-white dark:bg-bg-card">
                           Select budget...
                         </option>
                         {budgetOptions.map((option) => (
-                          <option key={option} value={option} className="bg-neutral-950">
+                          <option key={option} value={option} className="bg-white dark:bg-bg-card">
                             {option}
                           </option>
                         ))}
@@ -284,7 +284,7 @@ export default function ContactPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: 0.7 }}
                     >
-                      <label className="block text-white/50 text-sm mb-2">
+                      <label className="block text-text-secondary text-sm mb-2">
                         Tell us about your idea
                       </label>
                       <textarea
@@ -294,7 +294,7 @@ export default function ContactPage() {
                         required
                         rows={4}
                         placeholder="Briefly describe what you want to build..."
-                        className="w-full bg-neutral-950 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:outline-none focus:border-lime-400 transition-colors duration-300 resize-none"
+                        className="w-full bg-bg-main border border-border-default rounded-xl px-4 py-3 text-text-primary placeholder:text-text-muted focus:outline-none focus:border-brand-primary transition-colors duration-300 resize-none"
                       />
                     </motion.div>
 
@@ -319,7 +319,7 @@ export default function ContactPage() {
                                 repeat: Infinity,
                                 ease: "linear",
                               }}
-                              className="inline-block size-4 border-2 border-neutral-950 border-t-transparent rounded-full"
+                              className="inline-block size-4 border-2 border-white border-t-transparent rounded-full"
                             />
                             Sending...
                           </span>
@@ -327,7 +327,7 @@ export default function ContactPage() {
                           <span>⚡ Send Message & Book Call →</span>
                         )}
                       </Button>
-                      <p className="text-center text-white/30 text-xs uppercase tracking-wider">
+                      <p className="text-center text-text-muted text-xs uppercase tracking-wider">
                         Free 30-min discovery call · No commitment · Response in &lt;2hrs
                       </p>
                     </motion.div>

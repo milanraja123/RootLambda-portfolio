@@ -125,12 +125,12 @@ export default function PricingPage() {
             className="text-center mb-16"
           >
             <Tag>Revolutionary Pricing</Tag>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-6 text-text-primary">
               No Pricing.
               <br />
-              <span className="text-lime-400">Seriously.</span>
+              <span className="text-brand-primary">Seriously.</span>
             </h1>
-            <p className="text-xl text-white/50 mt-6 max-w-3xl mx-auto">
+            <p className="text-xl text-text-secondary mt-6 max-w-3xl mx-auto">
               Why pay lakhs for web services? Just pay for hosting and get your
               AI-powered website ready. We build it for free.
             </p>
@@ -143,36 +143,36 @@ export default function PricingPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-neutral-900 border border-lime-400/30 rounded-3xl p-8 md:p-12 overflow-hidden relative">
+            <div className="bg-white dark:bg-bg-card border border-brand-primary/30 rounded-3xl p-8 md:p-12 overflow-hidden relative shadow-elevated">
               {/* Background Glow */}
-              <div className="absolute -right-40 -top-40 w-[400px] h-[400px] bg-lime-400/10 rounded-full blur-[120px] pointer-events-none" />
-              <div className="absolute -left-40 -bottom-40 w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
+              <div className="absolute -right-40 -top-40 w-[400px] h-[400px] bg-brand-primary/5 rounded-full blur-[120px] pointer-events-none" />
+              <div className="absolute -left-40 -bottom-40 w-[300px] h-[300px] bg-brand-secondary/5 rounded-full blur-[100px] pointer-events-none" />
 
               <div className="relative z-10 text-center">
                 {/* Price Display */}
                 <div className="mb-8">
                   <div className="inline-flex items-center gap-4">
-                    <span className="text-5xl md:text-6xl font-bold text-white/20 line-through">
+                    <span className="text-5xl md:text-6xl font-bold text-text-muted/30 line-through">
                       ₹50,000+
                     </span>
-                    <span className="text-5xl md:text-6xl font-bold text-lime-400">
+                    <span className="text-5xl md:text-6xl font-bold text-brand-primary">
                       ₹0
                     </span>
                   </div>
-                  <p className="text-white/50 mt-4 text-lg">
+                  <p className="text-text-secondary mt-4 text-lg">
                     Development cost for your AI-powered website
                   </p>
                 </div>
 
                 {/* What You Pay */}
-                <div className="bg-neutral-950/50 border border-white/10 rounded-2xl p-6 max-w-lg mx-auto mb-8">
-                  <p className="text-white/70 mb-2">What you actually pay:</p>
+                <div className="bg-bg-soft border border-border-default rounded-2xl p-6 max-w-lg mx-auto mb-8">
+                  <p className="text-text-secondary mb-2">What you actually pay:</p>
                   <div className="flex items-center justify-center gap-2">
-                    <span className="text-3xl font-bold text-white">
+                    <span className="text-3xl font-bold text-text-primary">
                       Hosting Only
                     </span>
                   </div>
-                  <p className="text-white/40 text-sm mt-2">
+                  <p className="text-text-muted text-sm mt-2">
                     ~₹500-2000/month depending on your needs
                   </p>
                 </div>
@@ -201,8 +201,8 @@ export default function PricingPage() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-16"
           >
-            <h2 className="text-3xl md:text-4xl font-medium text-center mb-12">
-              What you get for <span className="text-lime-400">₹0</span>
+            <h2 className="text-3xl md:text-4xl font-medium text-center mb-12 text-text-primary">
+              What you get for <span className="text-brand-primary">₹0</span>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {benefits.map((benefit, index) => (
@@ -211,15 +211,15 @@ export default function PricingPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
-                  className="bg-neutral-900 border border-white/10 rounded-2xl p-6 hover:border-lime-400/30 transition-all duration-300 group"
+                  className="bg-white dark:bg-bg-card border border-border-default rounded-2xl p-6 hover:border-brand-primary/30 transition-all duration-300 group shadow-card"
                 >
                   <span className="text-4xl mb-4 block group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </span>
-                  <h3 className="text-lg font-semibold mb-2 group-hover:text-lime-400 transition-colors">
+                  <h3 className="text-lg font-semibold mb-2 text-text-primary group-hover:text-brand-primary transition-colors">
                     {benefit.title}
                   </h3>
-                  <p className="text-white/50 text-sm">{benefit.desc}</p>
+                  <p className="text-text-secondary text-sm">{benefit.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -232,9 +232,9 @@ export default function PricingPage() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-20"
           >
-            <div className="bg-neutral-900/50 border border-white/10 rounded-3xl p-8 md:p-12">
-              <h2 className="text-3xl md:text-4xl font-medium mb-8 text-center">
-                Why is it <span className="text-lime-400">free?</span>
+            <div className="bg-bg-section border border-border-default rounded-3xl p-8 md:p-12">
+              <h2 className="text-3xl md:text-4xl font-medium mb-8 text-center text-text-primary">
+                Why is it <span className="text-brand-primary">free?</span>
               </h2>
               <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
                 {whyFree.map((reason, index) => (
@@ -245,8 +245,8 @@ export default function PricingPage() {
                     transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                     className="flex items-start gap-3"
                   >
-                    <span className="text-lime-400 mt-1">✓</span>
-                    <span className="text-white/70">{reason}</span>
+                    <span className="text-brand-primary mt-1">✓</span>
+                    <span className="text-text-secondary">{reason}</span>
                   </motion.div>
                 ))}
               </div>
@@ -260,11 +260,11 @@ export default function PricingPage() {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="mt-20 text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-medium mb-4">
+            <h2 className="text-3xl md:text-4xl font-medium mb-4 text-text-primary">
               Ready to get your{" "}
-              <span className="text-lime-400">free website?</span>
+              <span className="text-brand-primary">free website?</span>
             </h2>
-            <p className="text-white/50 mb-8 max-w-xl mx-auto">
+            <p className="text-text-secondary mb-8 max-w-xl mx-auto">
               Book a free 30-minute call. We&apos;ll discuss your needs and show
               you exactly what we&apos;ll build — no strings attached.
             </p>

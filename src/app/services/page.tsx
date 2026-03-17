@@ -88,8 +88,8 @@ export default function ServicesPage() {
       {/* Hero Section */}
       <section className="py-24 relative overflow-hidden">
         {/* Glow Effects */}
-        <div className="absolute -right-40 top-0 w-[500px] h-[500px] bg-lime-400/10 rounded-full blur-[150px] pointer-events-none" />
-        <div className="absolute -left-40 bottom-0 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute -right-40 top-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[150px] pointer-events-none" />
+        <div className="absolute -left-40 bottom-0 w-[400px] h-[400px] bg-brand-secondary/5 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container max-w-6xl mx-auto relative z-10">
           <motion.div
@@ -99,10 +99,10 @@ export default function ServicesPage() {
             className="text-center"
           >
             <Tag>What We Build</Tag>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-6 leading-tight">
-              OUR <span className="text-lime-400">SERVICES</span>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-6 leading-tight text-text-primary">
+              OUR <span className="text-brand-primary">SERVICES</span>
             </h1>
-            <p className="text-xl text-white/50 mt-6 max-w-3xl mx-auto">
+            <p className="text-xl text-text-secondary mt-6 max-w-3xl mx-auto">
               Everything a funded or bootstrapped startup needs to launch, grow,
               and dominate — product, content, and video. All powered by AI.
               Without the 6-month wait.
@@ -112,7 +112,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Border */}
-      <div className="border-t border-white/5" />
+      <div className="border-t border-border-default" />
 
       {/* Services Grid */}
       <section className="py-24">
@@ -125,14 +125,14 @@ export default function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: Math.min(index * 0.08, 0.5) }}
-                className="group bg-neutral-900 border border-white/10 rounded-3xl p-6 hover:border-lime-400/50 transition-all duration-500 relative overflow-hidden"
+                className="group bg-white dark:bg-bg-card border border-border-default rounded-3xl p-6 hover:border-brand-primary/50 transition-all duration-500 relative overflow-hidden shadow-card"
               >
                 {/* Hover Gradient Effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-lime-400/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="relative z-10">
                   {/* Number Label */}
-                  <p className="text-xs text-white/30 font-medium tracking-wider mb-4">
+                  <p className="text-xs text-text-muted font-medium tracking-wider mb-4">
                     {service.num}
                   </p>
 
@@ -142,12 +142,12 @@ export default function ServicesPage() {
                   </div>
 
                   {/* Name */}
-                  <h3 className="text-xl font-semibold mb-3 group-hover:text-lime-400 transition-colors duration-300">
+                  <h3 className="text-xl font-semibold mb-3 text-text-primary group-hover:text-brand-primary transition-colors duration-300">
                     {service.name}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-white/50 text-sm leading-relaxed mb-6">
+                  <p className="text-text-secondary text-sm leading-relaxed mb-6">
                     {service.desc}
                   </p>
 
@@ -156,7 +156,7 @@ export default function ServicesPage() {
                     {service.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 text-xs bg-white/5 border border-white/10 rounded-full text-white/70 group-hover:border-lime-400/30 group-hover:text-lime-400/70 transition-all duration-300"
+                        className="px-3 py-1 text-xs bg-bg-soft border border-border-default rounded-full text-text-secondary group-hover:border-brand-primary/30 group-hover:text-brand-primary transition-all duration-300"
                       >
                         {tag}
                       </span>
@@ -170,7 +170,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Border */}
-      <div className="border-t border-white/5" />
+      <div className="border-t border-border-default" />
 
       {/* CTA Section */}
       <section className="py-24">
@@ -180,16 +180,16 @@ export default function ServicesPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative bg-neutral-900 border border-white/10 rounded-3xl p-12 md:p-16 overflow-hidden text-center"
+            className="relative bg-white dark:bg-bg-card border border-border-default rounded-3xl p-12 md:p-16 overflow-hidden text-center shadow-elevated"
           >
             {/* Background Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 via-transparent to-lime-400/10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-brand-secondary/5 via-transparent to-brand-primary/5" />
 
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl font-medium mb-4">
-                Ready to <span className="text-lime-400">build?</span>
+              <h2 className="text-4xl md:text-5xl font-medium mb-4 text-text-primary">
+                Ready to <span className="text-brand-primary">build?</span>
               </h2>
-              <p className="text-white/50 max-w-xl mx-auto mb-8">
+              <p className="text-text-secondary max-w-xl mx-auto mb-8">
                 Book a free 30-minute discovery call. No pitch deck needed —
                 just tell us what you want to build.
               </p>

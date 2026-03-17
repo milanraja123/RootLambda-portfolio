@@ -35,19 +35,19 @@ export default function Introduction() {
             <Tag>Introducing RootLambda</Tag>
           </div>
           <div className="text-3xl md:text-6xl lg:text-7xl text-center font-medium mt-10">
-            <span>Your creative process deserve better.</span>{" "}
+            <span className="text-text-primary">Your creative process deserve better.</span>{" "}
             <span className="">
               {words.map((word, wordIndex) => (
                 <span
                   key={wordIndex}
                   className={twMerge(
-                    "transition duration-500 text-white/15",
-                    wordIndex < currentWord && "text-white"
+                    "transition duration-500 text-text-primary/15",
+                    wordIndex < currentWord && "text-text-primary"
                   )}
                 >{`${word} `}</span>
               ))}
             </span>
-            <span className="text-lime-400 block">
+            <span className="text-brand-primary block">
               That&apos;s why we built RootLambda.
             </span>
           </div>
