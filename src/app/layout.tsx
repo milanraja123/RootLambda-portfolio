@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
+import SplashCursor from "@/components/SplashCursor";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
                     enableSystem
                     disableTransitionOnChange={false}
                 >
+                    <SplashCursor />
                     <CustomCursor />
                     {children}
                 </ThemeProvider>
