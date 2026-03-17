@@ -2,9 +2,11 @@
 
 import { motion } from "motion/react";
 import { useState } from "react";
+import Lottie from "lottie-react";
 import Button from "@/components/Button";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
+import emailAnimation from "@/assets/lottie-files/Email.json";
 
 const contactInfo = [
   {
@@ -107,7 +109,21 @@ export default function ContactPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="md:col-span-2 space-y-6"
             >
-              <p className="text-text-secondary text-base leading-relaxed mb-8">
+              {/* Email Lottie Animation */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex justify-center"
+              >
+                <Lottie
+                  animationData={emailAnimation}
+                  loop={true}
+                  className="w-full max-w-[230px]"
+                />
+              </motion.div>
+
+              <p className="text-text-secondary text-base leading-relaxed text-center md:text-left">
                 You have the idea. We have the speed. Fill the form or reach us
                 directly — we respond within 2 hours, Mon–Sat.
               </p>

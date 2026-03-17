@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
+import Lottie from "lottie-react";
 import Button from "@/components/Button";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import Tag from "@/components/Tag";
 import Link from "next/link";
+import walletAnimation from "@/assets/lottie-files/Wallet_Money.json";
 
 /* const pricingPlans = [
   {
@@ -125,7 +127,22 @@ export default function PricingPage() {
             className="text-center mb-16"
           >
             <Tag>Revolutionary Pricing</Tag>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-6 text-text-primary">
+
+            {/* Wallet Lottie Animation */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex justify-center my-6"
+            >
+              <Lottie
+                animationData={walletAnimation}
+                loop={true}
+                className="w-full max-w-[200px]"
+              />
+            </motion.div>
+
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium text-text-primary">
               No Pricing.
               <br />
               <span className="text-brand-primary">Seriously.</span>

@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
+import Lottie from "lottie-react";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import Tag from "@/components/Tag";
 import Button from "@/components/Button";
 import Link from "next/link";
+import shoppingCartAnimation from "@/assets/lottie-files/shopping_cart.json";
 
 const services = [
   {
@@ -91,23 +93,39 @@ export default function ServicesPage() {
         <div className="absolute -right-40 top-0 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[150px] pointer-events-none" />
         <div className="absolute -left-40 bottom-0 w-[400px] h-[400px] bg-brand-secondary/5 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="container max-w-6xl mx-auto relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center"
-          >
-            <Tag>What We Build</Tag>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-6 leading-tight text-text-primary">
-              OUR <span className="text-brand-primary">SERVICES</span>
-            </h1>
-            <p className="text-xl text-text-secondary mt-6 max-w-3xl mx-auto">
-              Everything a funded or bootstrapped startup needs to launch, grow,
-              and dominate — product, content, and video. All powered by AI.
-              Without the 6-month wait.
-            </p>
-          </motion.div>
+        <div className="container max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <Tag>What We Build</Tag>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-medium mt-6 leading-tight text-text-primary">
+                OUR <span className="text-brand-primary">SERVICES</span>
+              </h1>
+              <p className="text-xl text-text-secondary mt-6 max-w-xl">
+                Everything a funded or bootstrapped startup needs to launch, grow,
+                and dominate — product, content, and video. All powered by AI.
+                Without the 6-month wait.
+              </p>
+            </motion.div>
+
+            {/* Right - Lottie Animation */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex justify-center items-center"
+            >
+              <Lottie
+                animationData={shoppingCartAnimation}
+                loop={true}
+                className="w-full max-w-[500px]"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 

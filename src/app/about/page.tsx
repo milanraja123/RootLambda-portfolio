@@ -1,11 +1,13 @@
 "use client";
 
 import { motion } from "motion/react";
+import Lottie from "lottie-react";
 import Navbar from "@/sections/Navbar";
 import Footer from "@/sections/Footer";
 import Tag from "@/components/Tag";
 import Button from "@/components/Button";
 import Link from "next/link";
+import aboutAnimation from "@/assets/lottie-files/about_us.json";
 
 const stats = [
   { value: "7", label: "Days to MVP delivery" },
@@ -46,42 +48,61 @@ export default function AboutPage() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="min-h-[60vh] flex flex-col justify-end py-24 relative overflow-hidden">
+      <section className="min-h-[60vh] flex flex-col justify-center py-24 relative overflow-hidden">
         {/* Glow Effect */}
         <div className="absolute -left-32 -top-32 w-[500px] h-[500px] bg-brand-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="container max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <Tag>Our Story</Tag>
-          </motion.div>
+        <div className="container max-w-7xl mx-auto px-6 lg:px-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Content */}
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <Tag>Our Story</Tag>
+              </motion.div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-medium mt-6 leading-[0.95] text-text-primary"
-          >
-            Built different.
-            <br />
-            <span className="text-stroke-outline">
-              On purpose.
-            </span>
-          </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-5xl md:text-7xl lg:text-8xl font-medium mt-6 leading-[0.95] text-text-primary"
+              >
+                Built different.
+                <br />
+                <span className="text-stroke-outline">
+                  On purpose.
+                </span>
+              </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-lg text-text-secondary mt-6 max-w-xl leading-relaxed"
-          >
-            We are RootLambda — an AI-native studio from Delhi NCR. Not a
-            traditional agency. Something built for what business actually needs
-            right now.
-          </motion.p>
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="text-lg text-text-secondary mt-6 max-w-xl leading-relaxed"
+              >
+                We are RootLambda — an AI-native studio from Delhi NCR. Not a
+                traditional agency. Something built for what business actually needs
+                right now.
+              </motion.p>
+            </div>
+
+            {/* Right - Lottie Animation */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex justify-center items-center"
+            >
+              <Lottie
+                animationData={aboutAnimation}
+                loop={true}
+                className="w-full max-w-[600px]"
+              />
+            </motion.div>
+          </div>
         </div>
       </section>
 
