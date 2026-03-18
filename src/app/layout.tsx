@@ -3,6 +3,7 @@ import { Inter, Geist } from "next/font/google";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import SplashCursor from "@/components/SplashCursor";
+import ChatBot from "@/components/ChatBot";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { cn } from "@/lib/utils";
 
@@ -39,6 +40,7 @@ export default function RootLayout({
                     <SplashCursor />
                     <CustomCursor />
                     {children}
+                    <ChatBot />
                 </ThemeProvider>
             </body>
         </html>
